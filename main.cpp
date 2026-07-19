@@ -79,6 +79,10 @@ int main()
                 std::cout << quotient << std::endl;
             }
         }
+        else
+        {
+            std::cout << "Ungueltige Eingabe" << std::endl;
+        }
 
         std::cout << "Weiter(1) beenden(0)" << std::endl;
         std::cin >> w;
