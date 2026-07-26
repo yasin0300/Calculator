@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
+#include <cmath>
 double validateInput()
 {
     double input;
@@ -49,7 +49,8 @@ int main()
         std::cout << "1(+)  ";
         std::cout << "2(-)  ";
         std::cout << "3(*)  ";
-        std::cout << "4(/)" << std::endl;
+        std::cout << "4(/)  ";
+        std::cout << "5(^)" << std::endl;
 
         int x = validateInput();
         switch (x)
@@ -62,7 +63,7 @@ int main()
             num1 = validateInput();
             num2 = validateInput();
             double Summe = addi(num1, num2);
-            std::cout << Summe << std::endl;
+            std::cout << "= " << Summe << std::endl;
             break;
         }
         case 2:
@@ -73,7 +74,7 @@ int main()
             num1 = validateInput();
             num2 = validateInput();
             double Differenz = subt(num1, num2);
-            std::cout << Differenz << std::endl;
+            std::cout << "= " << Differenz << std::endl;
             break;
         }
         case 3:
@@ -84,7 +85,7 @@ int main()
             num1 = validateInput();
             num2 = validateInput();
             double Produkt = mult(num1, num2);
-            std::cout << Produkt << std::endl;
+            std::cout << "= " << Produkt << std::endl;
             break;
         }
         case 4:
@@ -102,9 +103,21 @@ int main()
             else
             {
                 double quotient = divi(num1, num2);
-                std::cout << quotient << std::endl;
+                std::cout << "n" << quotient << std::endl;
             }
             break;
+        case 5:
+        {
+            std::cout << "Exponential" << std::endl;
+            double num1, num2;
+            std::cout << "Enter your base" << std::endl;
+            num1 = validateInput();
+            std::cout << "Enter your exponent" << std::endl;
+            num2 = validateInput();
+            std::cout << "= " << pow(num1, num2);
+            std::cout << "\n";
+            break;
+        }
         }
         default:
             std::cout << "Invalid input" << std::endl;
