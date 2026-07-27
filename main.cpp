@@ -9,7 +9,8 @@ double validateInput()
         std::cin >> input;
         if (std::cin.fail())
         {
-            std::cout << "Invalid input!" << std::endl << "Please enter a valid number: " << std::endl;
+            std::cout << "Invalid input!" << std::endl
+                      << "Please enter a valid number: " << std::endl;
             std::cin.clear();
             std::cin.ignore(1000, '\n');
         }
@@ -54,6 +55,7 @@ int main()
         std::cout << "4(Division)  ";
         std::cout << "5(Exponential)  ";
         std::cout << "6(Logarithm)" << std::endl;
+
         int x = validateInput();
         switch (x)
         {
@@ -123,14 +125,25 @@ int main()
         }
         case 6:
         {
-            std::cout << "Logarithm" << std::endl;
-            double num1, num2;
-            std::cout << "Enter your base" << std::endl;
-            num1 = validateInput();
-            std::cout << "Enter your number"<< std::endl;
-            num2 = validateInput();
-            std::cout << "= " << log(num2) / log(num1);
-            std::cout << "\n";
+            bool valid = false;
+            while (!valid)
+            {
+                std::cout << "Logarithm" << std::endl;
+                double num1, num2;
+                std::cout << "Enter your base" << std::endl;
+                num1 = validateInput();
+                std::cout << "Enter your number" << std::endl;
+                num2 = validateInput();
+                if (num2 <= 0 || num1 <= 0 || num1 == 1)
+                {
+                    std::cout << "Invalid input for logarithm" << std::endl;
+                }
+                else
+                {
+                    valid = true;
+                    std::cout << "= " << log(num2) / log(num1) << std::endl;
+                }
+            }
             break;
         }
         default:
@@ -140,6 +153,5 @@ int main()
         std::cout << "Continue(1) exit(0)" << std::endl;
         running = validateInput();
     }
-
     return 0;
 }
