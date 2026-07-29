@@ -21,26 +21,6 @@ double validateInput()
     }
 }
 
-double addi(double summand1, double summand2)
-{
-    return summand1 + summand2;
-}
-
-double subt(double minuend, double subtrahend)
-{
-    return minuend - subtrahend;
-}
-
-double mult(double factor1, double factor2)
-{
-    return factor1 * factor2;
-}
-
-double divi(double dividend, double divisor)
-{
-    return dividend / divisor;
-}
-
 int main()
 {
     int running = 1;
@@ -54,7 +34,8 @@ int main()
         std::cout << "3(Multiplication)  " << std::endl;
         std::cout << "4(Division)  ";
         std::cout << "5(Exponential)  ";
-        std::cout << "6(Logarithm)" << std::endl;
+        std::cout << "6(Square Root)" << std::endl;
+        std::cout << "7(Logarithm)" << std::endl;
 
         int x = validateInput();
         switch (x)
@@ -66,8 +47,7 @@ int main()
             double num1, num2;
             num1 = validateInput();
             num2 = validateInput();
-            double Summe = addi(num1, num2);
-            std::cout << "= " << Summe << std::endl;
+            std::cout << "= " << num1 + num2 << std::endl;
             break;
         }
         case 2:
@@ -77,8 +57,7 @@ int main()
             double num1, num2;
             num1 = validateInput();
             num2 = validateInput();
-            double Differenz = subt(num1, num2);
-            std::cout << "= " << Differenz << std::endl;
+            std::cout << "= " << num1 - num2 << std::endl;
             break;
         }
         case 3:
@@ -88,8 +67,7 @@ int main()
             double num1, num2;
             num1 = validateInput();
             num2 = validateInput();
-            double Produkt = mult(num1, num2);
-            std::cout << "= " << Produkt << std::endl;
+            std::cout << "= " << num1 * num2 << std::endl;
             break;
         }
         case 4:
@@ -106,8 +84,8 @@ int main()
             }
             else
             {
-                double quotient = divi(num1, num2);
-                std::cout << "= " << quotient << std::endl;
+                
+                std::cout << "= " << num1 / num2 << std::endl;
             }
             break;
         }
