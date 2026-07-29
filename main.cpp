@@ -125,6 +125,22 @@ int main()
         }
         case 6:
         {
+            std::cout << "Square Root" << std::endl;
+            double num;
+            std::cout << "Enter a number" << std::endl;
+            num = validateInput();
+            if (num < 0)
+            {
+                std::cout << "Invalid input for square root" << std::endl;
+            }
+            else
+            {
+                std::cout << "= " << sqrt(num) << std::endl;
+            }
+            break;
+        }
+        case 7:
+        {
             bool valid = false;
             while (!valid)
             {
