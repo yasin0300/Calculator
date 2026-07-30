@@ -26,24 +26,24 @@ int main()
     int running = 1;
     while (running == 1)
     {
-        std::cout << "\n";
-        std::cout << "What kind of calculation would you like to perform??" << std::endl;
-        std::cout << "\n";
-        std::cout << "1(Addition)  ";
-        std::cout << "2(Subtraction)  ";
-        std::cout << "3(Multiplication)  " << std::endl;
-        std::cout << "4(Division)  ";
-        std::cout << "5(Exponential)  ";
-        std::cout << "6(Square Root)" << std::endl;
-        std::cout << "7(Logarithm)" << std::endl;
+        std::cout << "\n"
+                  << "What kind of calculation would you like to perform??" << std::endl
+                  << "\n"
+                  << "1(Addition)  "
+                  << "2(Subtraction)  "
+                  << "3(Multiplication)  " << std::endl
+                  << "4(Division)  "
+                  << "5(Exponential)  "
+                  << "6(Square Root)" << std::endl
+                  << "7(Logarithm)" << std::endl;
 
         int x = validateInput();
         switch (x)
         {
         case 1:
         {
-            std::cout << "Addition" << std::endl;
-            std::cout << "Enter 2 numbers\n";
+            std::cout << "Addition" << std::endl
+                      << "Enter 2 numbers\n";
             double num1, num2;
             num1 = validateInput();
             num2 = validateInput();
@@ -62,8 +62,8 @@ int main()
         }
         case 3:
         {
-            std::cout << "Multiplication" << std::endl;
-            std::cout << "Enter 2 numbers\n";
+            std::cout << "Multiplication" << std::endl
+                      << "Enter 2 numbers\n";
             double num1, num2;
             num1 = validateInput();
             num2 = validateInput();
@@ -72,8 +72,8 @@ int main()
         }
         case 4:
         {
-            std::cout << "Division" << std::endl;
-            std::cout << "Enter 2 numbers\n";
+            std::cout << "Division" << std::endl
+                      << "Enter 2 numbers\n";
             double num1, num2;
             num1 = validateInput();
             num2 = validateInput();
@@ -84,7 +84,7 @@ int main()
             }
             else
             {
-                
+
                 std::cout << "= " << num1 / num2 << std::endl;
             }
             break;
@@ -97,8 +97,8 @@ int main()
             num1 = validateInput();
             std::cout << "Enter your exponent" << std::endl;
             num2 = validateInput();
-            std::cout << "= " << pow(num1, num2);
-            std::cout << "\n";
+            std::cout << "= " << pow(num1, num2)
+                      << "\n";
             break;
         }
         case 6:
