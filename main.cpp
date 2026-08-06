@@ -23,6 +23,8 @@ double validateInput()
 
 int main()
 {
+    const double e = 2.718281828459045235;
+    
     int running = 1;
     while (running == 1)
     {
