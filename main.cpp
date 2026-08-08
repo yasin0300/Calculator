@@ -3,28 +3,36 @@
 #include <cmath>
 double validateInput()
 {
-    double input;
+    std::string input;
+
     while (true)
     {
         std::cin >> input;
-        if (std::cin.fail())
+
+        if (input == "e" || input == "E")
+        {
+            return M_E;
+        }
+        else if(input == "pi" || input == "Pi" || input == "PI"){
+            return M_PI;
+        }
+        try
+        {
+            return std::stod(input);
+        }
+        catch (...)
         {
             std::cout << "Invalid input!" << std::endl
                       << "Please enter a valid number: " << std::endl;
             std::cin.clear();
             std::cin.ignore(1000, '\n');
         }
-        else
-        {
-            return input;
-        }
     }
 }
 
 int main()
 {
-    const double e = 2.718281828459045235;
-    
+
     int running = 1;
     while (running == 1)
     {
